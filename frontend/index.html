@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Smart Order &amp; Conveyor System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Smart Order System</h1>
+  <p>Stock check, order processing and machine simulation</p>
+</header>
+<main>
+  <div id="message"></div>
+
+  <section>
+    <h2>Add part</h2>
+    <form id="partForm">
+      <input id="partName" placeholder="Part name" maxlength="100" required>
+      <input id="partQty" class="qty" type="number" min="0" placeholder="Quantity" required>
+      <button>Add</button>
+    </form>
+    <table>
+      <thead><tr><th>Part</th><th>In stock</th></tr></thead>
+      <tbody id="partsBody"></tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>New order</h2>
+    <form id="orderForm">
+      <select id="orderPart" required></select>
+      <input id="orderQty" class="qty" type="number" min="1" placeholder="Quantity" required>
+      <button>Order</button>
+    </form>
+  </section>
+
+  <section class="wide">
+    <h2>Orders</h2>
+    <table>
+      <thead><tr><th>#</th><th>Part</th><th>Qty</th><th>Status</th><th>Machine</th><th></th></tr></thead>
+      <tbody id="ordersBody"></tbody>
+    </table>
+  </section>
+</main>
+<script src="app.js" defer></script>
+</body>
+</html>
